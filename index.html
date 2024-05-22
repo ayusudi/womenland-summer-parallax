@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #landing-page img {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+  }
+</style>
+
+<body>
+  <section id="landing-page">
+    <img src="./layers/sky.png" alt="sky" id="sky">
+    <img src="./layers/sea.png" alt="sea" id="sea">
+    <img src="./layers/land.png" alt="land" id="land">
+    <img src="./layers/decor.png" alt="decor" id="decor">
+    <img src="./layers/cloud.png" alt="cloud" id="cloud">
+    <img src="./layers/island.png" alt="island" id="island">
+    <img src="./layers/boat.png" alt="island" id="boat">
+  </section>
+</body>
+<script>
+  let sky = document.getElementById("sky")
+  let sea = document.getElementById("sea")
+  let land = document.getElementById("land")
+  let decor = document.getElementById("decor")
+  let cloud = document.getElementById("cloud")
+  let island = document.getElementById("island")
+  let boat = document.getElementById("boat")
+  window.addEventListener('scroll', () => {
+    let value = window.scrollY
+    console.log(value);
+    island.style.left = value * -1 + 'px'
+    boat.style.left = value + 'px'
+    decor.style.top = value + 'px'
+    land.style.top = value + 'px'
+  })
+
+</script>
+
+</html>
